@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Calculator</title>
+</head>
+
+<body>
+    <form name="forms" class="for">
+        <h1>Calculator</h1>
+        <div class="container">
+            <div class="display">
+                <input type="text" name="question" id="question" readonly>
+            </div>
+
+            <div class="functions-part">
+                <div class="fun-row1">
+                    <button onclick="">DEG</button>
+                    <button onclick="">F-E</button>
+                </div>
+
+                <div class="fun-row2">
+                    <button onclick="">MC</button>
+                    <button onclick="">MR</button>
+                    <button onclick="">M+</button>
+                    <button onclick="">M-</button>
+                    <button onclick="">MS</button>
+                </div>
+
+                <div class="fun-row3">
+                    <select name="trig" id="trigonometry" class="drop" onchange="">
+                        <option value="sine" selected>Trigonometry</option>
+                        <option value="sine">sin</option>
+                        <option value="cos">cos</option>
+                        <option value="tan">tan</option>
+                        <option value="sinein">sinInverse</option>
+                        <option value="cosin">cosInverse</option>
+                        <option value="tanin">tanInverse</option>
+                    </select>
+
+                    <select name="func" id="function" class="drop">
+                        <option value="rigatoni">function</option>
+                        <option value="dave">function1</option>
+                        <option value="pumpernickel">function2</option>
+                        <option value="reeses">function3</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="dial">
+                <div class="row1">
+                    <button onclick="raisr()">2<sup>nd</sup></button>
+                    <button onclick="set_pie" value="">&pi;</button>
+                    <button onclick="">e</button>
+                    <button onclick="clear_screen()">C</button>
+                    <button onclick="remove_deg()"><i class="fa-solid fa-delete-left"></i></button>
+                </div>
+
+                <div class="row2">
+                    <button onclick="power()">x<sup>2</sup></button>
+                    <button onclick="devide_by_one()">1/x</button>
+                    <button onclick="check_abs()">|x|</button>
+                    <button onclick="exp_check()">exp</button>
+                    <button onclick=""><i class="fa-solid fa-percent"></i></button>
+                </div>
+
+                <div class="row3">
+                    <button onclick="double_squre_root()"><i class="fa-sharp fa-solid fa-square-root-variable"></i></button>
+                    <button onclick="bracket1()">(</button>
+                    <button onclick="bracket2()">)</button>
+                    <button onclick="fact()">n!</button>
+                    <button onclick="div()"><i class="fa-solid fa-divide"></i></button><br>
+                </div>
+
+                <div class="row4">
+                    <button onclick="raisr()">x<sup>y</sup></button>
+                    <button onclick="seven()" >7</button>
+                    <button onclick="eight()">8</button>
+                    <button onclick="nine()">9</button>
+                    <button onclick="mul()">X</button><br>
+                </div>
+
+                <div class="row5">
+                    <button onclick="raisr()">10<sup>x</sup></button>
+                    <button onclick="four()">4</button>
+                    <button onclick="five()">5</button>
+                    <button onclick="six()">6</button>
+                    <button onclick="sub()"><i class="fa-solid fa-minus"></i></button><br>
+                </div>
+
+                <div class="row6">
+                    <button onclick="log()">log</button>
+                    <button onclick="one()">1</button>
+                    <button onclick="two()">2</button>
+                    <button onclick="three()">3</button>
+                    <button onclick="add()"><i class="fa-solid fa-plus"></i></button><br>
+                </div>
+
+                <div class="row7">
+                    <button onclick="ln()">ln</button>
+                    <button onclick="convert()">+/-</button>
+                    <button onclick="zero()">0</button>
+                    <button onclick="point()">.</button>
+                    <button onclick="ans()"><i class="fa-solid fa-equals"></i></button><br>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="logic.js"></script>
+</body>
+
+</html>
