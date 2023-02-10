@@ -1,126 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Calculator</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Calculator</title>
 </head>
+
 <body>
-    <form name="forms" class="for">
-        <h1>Calculator</h1>
-        <div class="container">
-            <div class="display">
-                <input type="text" name="question" id="question">
+  <form name="forms" class="for">
+    <h1>Calculator</h1>
+    <div class="container">
+      <div class="display">
+        <input type="text" name="question" id="question">
+        <input type="text" name="answer" id="answer">
+      </div>
 
-            </div>
-
-            <div class="functions-part">
-                <div class="fun-row1">
-                    <input type="button" value="DEG" onclick="del()">
-                    <input type="button" value="F-E" onclick="del()">
-
-                </div>
-
-                <div class="fun-row2">
-                    <input type="button" value="MC" onclick="del()">
-                    <input type="button" value="MR" onclick="del()">
-                    <input type="button" value="M+" onclick="del()">
-                    <input type="button" value="M-" onclick="del()">
-                    <input type="button" value="MS" onclick="del()">
-
-                </div>
-
-                <div class="fun-row3">
-                    <select name="trig" id="trigonometry" class="drop" onchange="">
-                        <option value="sine" selected>Trigonometry</option>
-                        <option value="sine">sin</option>
-                        <option value="cos">cos</option>
-                        <option value="tan">tan</option>
-                        <option value="sinein">sinInverse</option>
-                        <option value="cosin">cosInverse</option>
-                        <option value="tanin">tanInverse</option>
-                      </select>
-
-                      <select name="func" id="function" class="drop">
-                        <option value="rigatoni">function</option>
-                        <option value="dave">function1</option>
-                        <option value="pumpernickel">function2</option>
-                        <option value="reeses">function3</option>
-                      </select>
-
-                </div>
-            </div>
-
-            <div class="dial">
-                <div class="row1">
-                    <button onclick="raisr()">2<sup>nd</sup></button>
-                    <input type="button" value="&pi;" onclick="set_pie()">
-                    <input type="button" value="E" onclick="check_e()">
-                    <input type="button" value="C" onclick="clear_screen()">
-                    <input type="button" value="DEL" onclick="remove_dig()">
-
-                </div>
-
-                <div class="row2">
-                    <button onclick="power()">x<sup>2</sup></button>
-                    <input type="button" value="1/x" onclick="devide_by_one()">
-                    <input type="button" value="|x|" onclick="check_abs()">
-                    <input type="button" value="exp" onclick="exp_check()">
-                    <input type="button" value="mod" onclick="designate('%')">
-
-                </div>
-
-                <div class="row3">
-                    <button onclick="double_squre_root()"><i class="fa-sharp fa-solid fa-square-root-variable"></i></button>
-
-                    <input type="button" value="("   onclick="designate('(')">
-                    <input type="button" value=")"   onclick="designate(')')">
-                    <input type="button" value="n!" onclick="factorial()">
-                    <input type="button" value="/"   onclick="designate('/')"><br>
-
-                </div>
-
-                <div class="row4">
-                    <button onclick="raisr()">x<sup>y</sup></button>
-                    <input type="button" value="7" onclick="designate('7')">
-                    <input type="button" value="8" onclick="designate('8')">
-                    <input type="button" value="9" onclick="designate('9')">
-                    <input type="button" value="*"   onclick="designate('*')">
-
-                </div>
-
-                <div class="row5">
-                    <button onclick="raisr()">10<sup>x</sup></button>
-                    <input type="button" value="4"   onclick="designate('4')">
-                    <input type="button" value="5"   onclick="designate('5')">
-                    <input type="button" value="6"   onclick="designate('6')">
-                    <input type="button" value="-"   onclick="designate('-')">
-                </div>
-
-                <div class="row6">
-                    <input type="button" value="log" onclick="logarithm_check()">
-                    <input type="button" value="1"   onclick="designate('1')">
-                    <input type="button" value="2"   onclick="designate('2')">
-                    <input type="button" value="3"   onclick="designate('3')">
-                    <input type="button" value="+"   onclick="designate('+')"><br>
-
-                </div>
-
-                <div class="row7">
-                    <input type="button" value="ln" onclick="del()">
-                    <input type="button" value="+/-" onclick="del()">
-                    <input type="button" value="0" onclick="designate('0')">
-                    <input type="button" value="." onclick="designate('.')">
-                    <input type="button" value="=" onclick="total()">
-                </div>
-            </div>
+      <div class="functions-part">
+        <div class="fun-row1">
+          <input type="button" value="DEG" onclick="del()">
+          <input type="button" value="F-E" onclick="del()">
         </div>
-    </form>
-    <script src="logic.js"></script>
+
+        <div class="fun-row2">
+          <input type="button" value="MC" onclick="memory_clear()">
+          <input type="button" value="MR" onclick="memory_recall()">
+          <input type="button" value="M+" onclick="memory_add(forms.question.value)">
+          <input type="button" value="M-" onclick="del()">
+          <input type="button" value="MS" onclick="del()">
+        </div>
+
+        <div class="fun-row3">
+          <select name="trig" id="trigonometry" class="drop" onchange="">
+            <option value="trigonometry" selected>Trigonometry</option>
+            <option value="sin" >sin</option>
+            <option value="cos">cos</option>
+            <option value="tan">tan</option>
+            <option value="cosec">cosec</option>
+            <option value="sec">sec</option>
+            <option value="cot">cot</option>
+          </select>
+
+          <select name="func" id="function" class="drop2">
+            <option value="functions">Functions</option>
+            <option value="floor">floor</option>
+            <option value="ceil">ceil</option>
+            <option value="trunc">trunk</option>
+
+          </select>
+
+        </div>
+      </div>
+
+      <div class="dial">
+        <div class="row1">
+          <button onclick="raisr()">2<sup>nd</sup></button>
+          <input type="button" value="&pi;" onclick="set_pie()">
+          <input type="button" value="E" onclick="check_e()">
+          <input type="button" value="C" onclick="clear_screen()">
+          <input type="button" value="DEL" onclick="remove_dig()">
+        </div>
+
+        <div class="row2">
+          <input type="button" onclick="power()" value="power"></button>
+          <input type="button" value="1/x" onclick="devide_by_one()">
+          <input type="button" value="|x|" onclick="check_abs()">
+          <input type="button" value="exp" onclick="exp_check()">
+          <input type="button" value="mod" onclick="get_value('%')">
+
+        </div>
+
+        <div class="row3">
+          <input type="button" onclick="double_squre_root()" value="sqrt">
+          <input type="button" value="(" onclick="get_value('(')">
+          <input type="button" value=")" onclick="get_value(')')">
+          <input type="button" value="n!" onclick="factorial()">
+          <input type="button" value="/" onclick="get_value('/')"><br>
+
+        </div>
+
+        <div class="row4">
+          <button onclick="raisr()">x<sup>y</sup></button>
+          <input type="button" value="7" onclick="get_value('7')">
+          <input type="button" value="8" onclick="get_value('8')">
+          <input type="button" value="9" onclick="get_value('9')">
+          <input type="button" value="*" onclick="get_value('*')">
+        </div>
+
+        <div class="row5">
+          <input type="button" onclick="ten_raise()" value="10^x">
+          <input type="button" value="4" onclick="get_value('4')">
+          <input type="button" value="5" onclick="get_value('5')">
+          <input type="button" value="6" onclick="get_value('6')">
+          <input type="button" value="-" onclick="get_value('-')">
+        </div>
+
+        <div class="row6">
+          <input type="button" value="log" onclick="logarithm_check()">
+          <input type="button" value="1" onclick="get_value('1')">
+          <input type="button" value="2" onclick="get_value('2')">
+          <input type="button" value="3" onclick="get_value('3')">
+          <input type="button" value="+" onclick="get_value('+')"><br>
+        </div>
+
+        <div class="row7">
+          <input type="button" value="ln" onclick="check_ln()">
+          <input type="button" value="+/-" onclick="plus_minus()">
+          <input type="button" value="0" onclick="get_value('0')">
+          <input type="button" value="." onclick="get_value('.')">
+          <input type="button" value="=" onclick="total()">
+        </div>
+      </div>
+    </div>
+  </form>
+  <script src="logic.js"></script>
 </body>
+
 </html>
