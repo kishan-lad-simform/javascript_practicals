@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div align="center">
+  <h1>Product Form</h1>
+  <form>
+    <button id="sort-product-id">Sort by Product ID</button>
+    <button id="sort-product-name">Sort by Product Name</button>
+    <button id="sort-price">Sort by Price</button><br /><br />
+
+    Product Name :
+    <input type="text" id="productName"> <br />
+    <div id="show"></div> <br />
+
+    Price :
+    <input type="text" id="productPrice"> <br />
+    <div id="show2"></div> <br />
+
+    description :
+    <input type="text" id="productDescription"> <br />
+    <div id="show3"></div> <br />
+
+    Image URL :
+    <input type="text" id="productImage"> <br />
+    <div id="show4"></div> <br />
+    <input type="button" value="Add" onclick="submit_data()">
+
+  </form>
+  <div id="show">
+  </div>
+
+  <h2>Products</h2>
+  <table border="1">
+    <thead>
+      <tr>
+        <td>Id</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Product Image</td>
+        <td>Description</td>
+        <td colspan="2">Action</td>
+      </tr>
+    </thead>
+
+    <tbody id="root">
+    </tbody>
+
+  </table>
+
+  <script src="script.js"></script>
+  </div>
+</body>
+
+</html>
