@@ -1,0 +1,89 @@
+
+.header{
+    width: 100%;
+    height: auto;
+    display: flex;
+    background-color: blue;
+    position: fixed;
+    justify-content: space-around;
+    top: 0;
+    z-index: 1;
+}
+
+.header button{
+    width: 7%;
+    margin: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    padding: 20px;
+}
+
+#home-content{
+    margin-left: 150px;
+    
+}
+.home-page{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: justify;
+    padding: 5px;   
+    justify-content: space-evenly;
+}
+p{
+    font-size: 25px;
+}
+h1{
+    text-align: center;
+    font-size: 50px;
+}
+hr{
+    width: 100%;
+}
+.image-page{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+    height: auto;
+   
+   
+    
+}
+.image-page img{
+    z-index: -1;
+    width: 50%;
+    margin: auto;
+}
+
+.service-page{
+    display:flex;;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: justify;
+   
+}
+.about-us-page{
+    display:flex;;
+    flex-wrap: wrap;    
+    justify-content: center;
+    text-align: justify;
+    margin: 20px 0px;
+    width: 100%;
+    height: auto;
+    background-color: blue;
+    color: white;
+
+}
+p, #footer{
+    font-size: 20px;
+}
+.content{
+    margin: 200px 50px;
+}
+ #img1{
+    margin-top: 10px;
+    height: 180px;
+    width: 280px;
+}
